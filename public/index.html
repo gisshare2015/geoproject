@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="即时分享GISShare.com-旨在分享易用GIS工具集，提供专业的GIS能力支撑。"/>
+    <meta name="Keywords" content="坐标拾取,坐标转换,即时分享,WKT,WKB,GeoJson,EsriJson,TopoJson,ShapeFile,GISShare,SMap,GS"/>
+    <link rel="icon" href="<%= BASE_URL %>logo32.png">
+    <style>
+      html, body{
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <title>图形坐标转换工具</title>
+    <script>
+      window.GSMap = {
+        Plugin:{
+          BaiDu:{
+            VGL10:{
+              URLHost: 'www.gisshare.com/VD/Local/BaiDu/JSAPI/',
+              URLHost_OnlyFile: true,
+              URL_protocol: 'http:'
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
