@@ -1,12 +1,16 @@
 <template>
   <n-message-provider>
     <div class="header">
-      <div class="logo">
+      <div class="area-l">
         <img src="./assets/GISShare.png" onclick="window.open(window.location.origin, '_blank')"/>
       </div>
-      <div class="desc">
+      <div class="area-m">
         <p class="desc_text">1.按照数据格式输入坐标信息；</p>
         <p class="desc_text">2.选择空间参考（SRID）的相互转换方式。</p>
+      </div>
+      <div class="area-r">
+        <div>QQ群：581781386</div>
+        <a href="https://github.com/gisshare2015/geoproject" target = '_blank'>GitHub</a>
       </div>
     </div>
     <MainView />
@@ -40,22 +44,23 @@ defineComponent({name: 'App'});
   height: 39px;
   background-color: #fff;
   border-bottom: 1px solid #e6e6e6;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
   flex-flow: row nowrap;
   align-items: center;
   position: fixed;
   z-index: 10;
 }
-.logo {
+.area-l {
   width: 180px;
   height:39px;
   margin-right: 15px;
 }
-.logo img{
+.area-l img{
   width: 100%;
   height: 100%;
 }
-.desc{
+.area-m{
   line-height: 1;
   flex:1;
   color: #333;
@@ -63,6 +68,13 @@ defineComponent({name: 'App'});
 }
 .desc_text{
   margin: 3px 0;
+}
+.area-r {
+  color: #000;
+  justify-self: flex-end;
+  display: flex;
+  column-gap: 9px;
+  margin-right: 6px;
 }
 
 .icp-info{
