@@ -124,7 +124,7 @@ GISShare.SMap.Fitting.FittingHelper.Fit(pPoint, //目标点
 console.log(pPoint.getX() + "," + pPoint.getY());
 ```
 （注：  
-     GISShare.SMap库包是一个提供GIS能力的多语言SDK（1.DotNet-C#-WinFrom和WPF；2.Java-Android；3.JS）。  
+     [GISShare.SMap](http://www.gisshare.com/APIDoc/index.html)库包是一个提供GIS能力的多语言SDK（1.DotNet-C#-WinFrom和WPF；2.Java-Android；3.JS）。  
      支持：  
      1.几何数据的定义与计算（如：点、线、面、多点、多线、多面、圆、直线、三阶贝塞尔、圆弧、椭圆弧等）；  
      2.空间参考的定义与转换（支持：Proj4、WKT等）；  
