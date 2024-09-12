@@ -1,22 +1,37 @@
 <template>
-  <n-message-provider>
-    <MainView />
-    <div class="icp-info">
-      GISShare
-      <a href="https://beian.miit.gov.cn" target = '_blank'> {{CONST_ICPInfo}} </a>
-    </div>
-  </n-message-provider>
+  <n-modal-provider>
+    <n-message-provider>
+      <MainView />
+      <div class="icp-info">
+        GISShare
+        <a href="https://beian.miit.gov.cn" target = '_blank'> {{CONST_ICPInfo}} </a>
+      </div>
+    </n-message-provider>
+  </n-modal-provider>
 </template>
 
 <script setup>
 import { defineComponent, ref } from 'vue';
-import { NMessageProvider } from 'naive-ui';
+import { NMessageProvider, NModalProvider } from 'naive-ui';
 import MainView from './components/MainView.vue'
 
 const CONST_ICPInfo = ref(window.location.host.indexOf('gisshare.com') >= 0 ? '皖ICP备15011632号-1' : '皖ICP备15011632号-2');
 
 defineComponent({name: 'App'});
 
+window.addEventListener('resize', (event) => {
+  if(screen.height === document.documentElement.clientHeight){
+    // console.log('已进入全屏');
+    document.getElementById('divHeader').style.display = 'none';
+    document.getElementById('divMain').style.height = '100vh';
+    document.getElementById('divMain').style.paddingTop = '0px';
+  } else{
+    // console.log('已退出全屏');
+    document.getElementById('divHeader').style.display = '';
+    document.getElementById('divMain').style.height = '';
+    document.getElementById('divMain').style.paddingTop = '';
+  }
+});
 </script>
 
 <style>

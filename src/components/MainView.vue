@@ -1,5 +1,5 @@
 <template>
-    <div class="main">
+    <div id="divMain" class="main">
       <GeoProject  ref="m_RefGeoProject" />
       <n-tabs type="line" class='main-view' animated>
         <n-tab-pane display-directive='show' name="GISShare.SMap">

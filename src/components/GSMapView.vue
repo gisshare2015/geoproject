@@ -89,6 +89,7 @@
     }
     m_MapControl.getMap().Refresh();
     //
+    m_pGraphicsLayer.ResetExtent()
     const pExtent = m_pGraphicsLayer.getExtent();
     if(pExtent && !pExtent.getIsEmpty()){
         const dW = pExtent.getWidth();
